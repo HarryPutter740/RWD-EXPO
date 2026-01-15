@@ -30,6 +30,7 @@ adminBtn.addEventListener("click", () => {
 // RESET ANALYTICS
 resetBtn.addEventListener("click", () => {
   if (confirm("Reset all analytics data?")) {
+    logActivity("Reset analytics data");
     localStorage.removeItem("coffeeData");
     location.reload();
   }

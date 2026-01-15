@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile | The Daily Grind</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+
+<div class="app-layout">
+  <button class="hamburger" id="menuBtn">☰</button>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h1 class="logo">DAILY <span>GRIND</span></h1>
+    <input type="text" id="sidebarSearch" class="sidebar-search" placeholder="Search menu...">
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html">Orders</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="profile.html" class="active">Profile</a>
+    </nav>
+    <button id="themeToggle" style="margin-top: auto; margin-bottom: 1rem; background: none; border: 1px solid var(--text-muted); color: var(--text-muted); padding: 0.5rem; border-radius: 6px; width: 100%;">☀️ Light Mode</button>
+    <div style="font-size: 0.8rem; color: #666;">
+      © 2025 The Daily Grind
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <section class="card welcome">
+      <h2>Edit <span>Profile</span></h2>
+      <p>Manage your personal details.</p>
+    </section>
+
+    <!-- Profile Form -->
+    <section class="card span-2">
+      <form id="profileForm" style="display: flex; flex-direction: column; gap: 1.2rem;">
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">Display Name</label>
+          <input type="text" id="nameInput" style="width: 100%; padding: 0.8rem; border-radius: 8px;" required>
+        </div>
+        
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">Email Address</label>
+          <input type="email" id="emailInput" style="width: 100%; padding: 0.8rem; border-radius: 8px;" required>
+        </div>
+
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">Bio</label>
+          <textarea id="bioInput" rows="3" style="width: 100%; padding: 0.8rem; border-radius: 8px;"></textarea>
+        </div>
+
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">Favorite Coffee</label>
+          <input type="text" id="favCoffeeInput" style="width: 100%; padding: 0.8rem; border-radius: 8px;">
+        </div>
+
+        <div style="margin-top: 0.5rem;">
+          <button type="submit" class="primary">Save Changes</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Profile Preview -->
+    <section class="card small">
+      <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Profile" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--primary);">
+        <h4 id="profileNameDisplay" style="font-size: 1.2rem; margin-bottom: 0.2rem;">Brewer</h4>
+        <p id="profileBioDisplay" style="color: var(--text-muted); font-size: 0.9rem;">Caffeine enthusiast.</p>
+        <p id="profileEmailDisplay" style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">brewer@dailygrind.com</p>
+      </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="card span-3">
+      <h3>Recent <span>Activity</span></h3>
+      <ul id="activityList" style="list-style: none; padding: 0; margin-top: 1rem;"></ul>
+    </section>
+
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="profile.js"></script>
+</body>
+</html>

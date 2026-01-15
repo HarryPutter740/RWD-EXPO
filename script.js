@@ -29,7 +29,7 @@ const coffeeVibes = [
 // DOM Elements
 const vibeBtn = document.querySelector(".secondary");
 const statsCard = document.querySelector(".stats");
-const hydrationBtn = document.querySelector(".tag");
+const hydrationBtn = document.querySelector("#hydrationBtn") || document.querySelector(".tag");
 
 // Coffee Vibe Button
 vibeBtn.addEventListener("click", () => {
@@ -43,12 +43,16 @@ vibeBtn.addEventListener("click", () => {
     <div class="progress"></div>
     <p class="note">${vibe.message}</p>
   `;
+  logActivity(`Checked vibe: ${vibe.mood}`);
 });
 
 // Hydration Reminder
-hydrationBtn.addEventListener("click", () => {
-  alert("Water exists. Please acknowledge it.");
-});
+if (hydrationBtn) {
+  hydrationBtn.addEventListener("click", () => {
+    logActivity("Hydration check");
+    alert("Water exists. Please acknowledge it.");
+  });
+}
 
 // Soft greeting based on time
 const hour = new Date().getHours();

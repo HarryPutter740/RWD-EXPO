@@ -4,66 +4,78 @@
   <meta charset="UTF-8" />
   <title>Analytics | The Daily Grind</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="layout.css" />
 </head>
 <body>
 
-<header class="navbar">
-  <h1 class="logo">THE DAILY <span>GRIND</span></h1>
-  <nav>
-    <a href="index.html">Dashboard</a>
-    <a href="menu.html">Menu</a>
-    <a href="orders.html">Orders</a>
-    <a href="rewards.html">Rewards</a>
-    <a href="analytics.html">Analytics</a>
-  </nav>
-</header>
-
-<main class="container">
-
-  <section class="card welcome">
-    <h2>Analytics <span>Overview</span></h2>
-    <p>Numbers pretending to be truth.</p>
-    <button class="secondary" id="adminBtn">Enter Admin Mode</button>
-    <button class="primary" id="resetBtn">Reset Analytics</button>
-  </section>
-
-  <!-- ADMIN ONLY -->
-  <section class="card small admin-only">
-    <h4>Total Orders</h4>
-    <p id="totalOrders">0</p>
-  </section>
-
-  <section class="card small admin-only">
-    <h4>Total Beans</h4>
-    <p id="totalBeans">0 ☕</p>
-  </section>
-
-  <section class="card small admin-only">
-    <h4>Last Coffee</h4>
-    <p id="lastCoffee">None</p>
-  </section>
-
-  <!-- BAR CHART -->
-  <section class="card admin-only">
-    <h4>Weekly Orders</h4>
-    <div class="chart">
-      <div class="bar" data-day="Mon"></div>
-      <div class="bar" data-day="Tue"></div>
-      <div class="bar" data-day="Wed"></div>
-      <div class="bar" data-day="Thu"></div>
-      <div class="bar" data-day="Fri"></div>
+<div class="app-layout">
+  <button class="hamburger" id="menuBtn">☰</button>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h1 class="logo">DAILY <span>GRIND</span></h1>
+    <input type="text" id="sidebarSearch" class="sidebar-search" placeholder="Search menu...">
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html">Orders</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="analytics.html" class="active">Analytics</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+    <button id="themeToggle" style="margin-top: auto; margin-bottom: 1rem; background: none; border: 1px solid var(--text-muted); color: var(--text-muted); padding: 0.5rem; border-radius: 6px; width: 100%;">☀️ Light Mode</button>
+    <div style="font-size: 0.8rem; color: #666;">
+      © 2025 The Daily Grind
     </div>
-  </section>
+  </aside>
 
-  <!-- DAILY SIM -->
-  <section class="card admin-only highlight">
-    <h4>Daily Usage Simulation</h4>
-    <p id="dailyUsage">Loading...</p>
-  </section>
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
 
-</main>
+    <section class="card welcome">
+      <h2>Analytics <span>Overview</span></h2>
+      <p>Numbers pretending to be truth.</p>
+      <div style="margin-top: 1rem;">
+        <button class="secondary" id="adminBtn">Enter Admin Mode</button>
+        <button class="primary" id="resetBtn">Reset Analytics</button>
+      </div>
+    </section>
 
-<footer>© 2025 The Daily Grind</footer>
+    <!-- ADMIN ONLY -->
+    <section class="card small admin-only">
+      <h4>Total Orders</h4>
+      <p id="totalOrders">0</p>
+    </section>
+
+    <section class="card small admin-only">
+      <h4>Total Beans</h4>
+      <p id="totalBeans">0 ☕</p>
+    </section>
+
+    <section class="card small admin-only">
+      <h4>Last Coffee</h4>
+      <p id="lastCoffee">None</p>
+    </section>
+
+    <!-- BAR CHART -->
+    <section class="card admin-only span-2">
+      <h4>Weekly Orders</h4>
+      <div class="chart">
+        <div class="bar" data-day="Mon"></div>
+        <div class="bar" data-day="Tue"></div>
+        <div class="bar" data-day="Wed"></div>
+        <div class="bar" data-day="Thu"></div>
+        <div class="bar" data-day="Fri"></div>
+      </div>
+    </section>
+
+    <!-- DAILY SIM -->
+    <section class="card admin-only highlight">
+      <h4>Daily Usage Simulation</h4>
+      <p id="dailyUsage">Loading...</p>
+    </section>
+
+  </main>
+</div>
 
 <script src="data.js"></script>
 <script src="analytics.js"></script>
