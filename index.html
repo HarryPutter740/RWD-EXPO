@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Daily Grind</title>
+  <title>Dashboard | The Daily Grind</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,76 +13,72 @@
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <h1 class="logo">THE DAILY <span>GRIND</span></h1>
     <nav>
-      <a href="#">Dashboard</a>
-      <a href="#">Menu</a>
-      <a href="#">Orders</a>
-      <a href="#">Rewards</a>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="orders.html">Orders</a>
+      <a href="rewards.html">Rewards</a>
+      <a href="analytics.html">Analytics</a>
     </nav>
   </header>
 
-  <!-- Main Content -->
+  <!-- MAIN DASHBOARD -->
   <main class="container">
 
-    <!-- Welcome Card -->
+    <!-- Welcome -->
     <section class="card welcome">
       <h2>Welcome to <span>The Daily Grind</span></h2>
-      <p>A little corner of caffeine magic where days restart and dreams reboot.</p>
+      <p>Your caffeine-powered command center.</p>
 
       <div class="buttons">
         <button class="primary">Order Now</button>
         <button class="secondary">Today’s Coffee Vibe</button>
       </div>
 
-      <small>Click “Today’s Coffee Vibe” to reveal today’s brew mood.</small>
+      <small>Powered by beans, deadlines, and questionable sleep.</small>
     </section>
 
-    <!-- Stats Card -->
+    <!-- Live Stats -->
     <section class="card stats">
-      <h3>Today’s Brew Stats</h3>
-      <p>Cups brewed: <strong>12</strong></p>
-      <p>Most popular: <strong>Cold Brew</strong></p>
-      <p>Mood: <strong>Highly Caffeinated</strong></p>
+      <h3>Live Brew Stats</h3>
+      <p>Cups brewed: <strong id="cups">0</strong></p>
+      <p>Last order: <strong id="lastOrder">None</strong></p>
+      <p>Mood: <strong>Caffeinated</strong></p>
       <div class="progress"></div>
-      <p class="note">Good evening. Unwind with a warm cup.</p>
+      <p class="note">Choose a coffee to begin.</p>
     </section>
 
-    <!-- Feature Cards -->
+    <!-- Highlights -->
     <section class="card small">
-      <h4>☕ Featured Blend</h4>
-      <p>A dark roast built for late-night warriors.</p>
-      <span class="tag">New</span>
-    </section>
-
-    <section class="card small">
-      <h4>⚡ Quick Access</h4>
-      <p>Jump back into your recent orders and saved brews.</p>
-      <span class="tag">Dashboard</span>
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" />
+      <h4>Morning Ritual</h4>
+      <p>Steam first. Thoughts later.</p>
     </section>
 
     <section class="card small">
-      <h4>⭐ Rewards</h4>
-      <p>Earn beans, redeem perks, sip glory.</p>
-      <span class="tag">Loyalty</span>
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" />
+      <h4>Barista Picks</h4>
+      <p>Chosen by people who judge coffee.</p>
     </section>
 
-    <section class="card small">
-      <h4>💡 Barista Note</h4>
-      <p>Remember to hydrate too.</p>
-      <span class="tag">Reminder</span>
+    <section class="card small highlight">
+      <h4>Analytics Ready</h4>
+      <p>Track orders. Measure loyalty. Pretend it’s big data.</p>
+      <a href="analytics.html" style="color:#fff;text-decoration:underline;">View Analytics →</a>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     © 2025 The Daily Grind
   </footer>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+  <!-- SHARED DATA + PAGE JS -->
+  <script src="data.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>

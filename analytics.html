@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Analytics | The Daily Grind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">THE DAILY <span>GRIND</span></h1>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="menu.html">Menu</a>
+    <a href="orders.html">Orders</a>
+    <a href="rewards.html">Rewards</a>
+    <a href="analytics.html">Analytics</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section class="card welcome">
+    <h2>Analytics <span>Overview</span></h2>
+    <p>Numbers pretending to be truth.</p>
+    <button class="secondary" id="adminBtn">Enter Admin Mode</button>
+    <button class="primary" id="resetBtn">Reset Analytics</button>
+  </section>
+
+  <!-- ADMIN ONLY -->
+  <section class="card small admin-only">
+    <h4>Total Orders</h4>
+    <p id="totalOrders">0</p>
+  </section>
+
+  <section class="card small admin-only">
+    <h4>Total Beans</h4>
+    <p id="totalBeans">0 ☕</p>
+  </section>
+
+  <section class="card small admin-only">
+    <h4>Last Coffee</h4>
+    <p id="lastCoffee">None</p>
+  </section>
+
+  <!-- BAR CHART -->
+  <section class="card admin-only">
+    <h4>Weekly Orders</h4>
+    <div class="chart">
+      <div class="bar" data-day="Mon"></div>
+      <div class="bar" data-day="Tue"></div>
+      <div class="bar" data-day="Wed"></div>
+      <div class="bar" data-day="Thu"></div>
+      <div class="bar" data-day="Fri"></div>
+    </div>
+  </section>
+
+  <!-- DAILY SIM -->
+  <section class="card admin-only highlight">
+    <h4>Daily Usage Simulation</h4>
+    <p id="dailyUsage">Loading...</p>
+  </section>
+
+</main>
+
+<footer>© 2025 The Daily Grind</footer>
+
+<script src="data.js"></script>
+<script src="analytics.js"></script>
+</body>
+</html>
