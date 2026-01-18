@@ -1,3 +1,8 @@
+// AUTH GUARD
+if (!localStorage.getItem("isLoggedIn") && !location.pathname.includes("login.html")) {
+  window.location.href = "login.html";
+}
+
 // Initialize shared data if not present
 if (!localStorage.getItem("coffeeData")) {
   localStorage.setItem(
@@ -219,3 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize Badge
   updateOrderBadge();
 });
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  window.location.href = "login.html?action=logout";
+}
